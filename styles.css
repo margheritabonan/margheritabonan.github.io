@@ -1,21 +1,150 @@
-body {
-    font-family: Arial, sans-serif;
+/* styles.css */
+
+/* ==== Color & Typography Variables ==== */
+:root {
+    --color-bg: #f9f9f9;
+    --color-surface: #ffffff;
+    --color-primary: #2c3e50;
+    --color-secondary: #2980b9;
+    --color-accent: #e67e22;
+    --color-text: #333333;
+    --font-heading: 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --radius: 8px;
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* ==== Base styles ==== */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  header, section, footer {
-    margin-bottom: 2rem;
-  }
-  h1, h2 {
-    color: #333;
+    min-height: 100vh;
   }
   a {
-    color: #0366d6;
+    color: var(--color-secondary);
     text-decoration: none;
+    transition: color var(--transition);
   }
+  a:hover {
+    color: var(--color-accent);
+  }
+  
+  /* ====  container ==== */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* ==== header ==== */
+  header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+  }
+  
+  /* ==== sects ==== */
+  section {
+    background-color: var(--color-surface);
+    padding: 1.75rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.875rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  
+  /* lists */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* CV  Button */
+  #cv-download a {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: background-color var(--transition), transform var(--transition);
+  }
+  #cv-download a:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+  }
+  
+  /* ==== footer ==== */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  /* ==== responsive design ==== */
   @media (max-width: 600px) {
-    body { padding: 0.5rem; }
+    .container {
+      padding: 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    section {
+      padding: 1.25rem 1.5rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
   }
   
