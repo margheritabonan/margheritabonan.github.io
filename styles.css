@@ -40,6 +40,60 @@
   a:hover {
     color: var(--color-accent);
   }
+
+  
+  /* ==== Navigation Bar ==== */
+.nav {
+    background-color: var(--color-surface);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 0;
+  }
+  
+  .nav-list li {
+    margin: 0 1.25rem;
+  }
+  
+  .nav-list a {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    transition: color var(--transition), transform var(--transition);
+  }
+  
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  
+  /* Push header content down so nav doesn’t overlap */
+  header {
+    padding-top: 1.5rem;
+  }
+  
+  /* Mobile: stack nav items vertically */
+  @media (max-width: 600px) {
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-list li {
+      margin: 0.5rem 0;
+    }
+  }
+
   
   /* ====  container ==== */
   .container {
