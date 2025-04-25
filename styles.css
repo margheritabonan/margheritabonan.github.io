@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  header, section, footer {
+    margin-bottom: 2rem;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  @media (max-width: 600px) {
+    body { padding: 0.5rem; }
+  }
+  
