@@ -5,7 +5,8 @@
     --color-bg: #f9f9f9;
     --color-surface: #ffffff;
     --color-primary: #2c3e50;
-    --color-secondary: #2980b9;
+    --color-secondary: #117820d2;
+    --color-tertiary: #974f06;
     --color-accent: #e67e22;
     --color-text: #333333;
     --font-heading: 'Helvetica Neue', Arial, sans-serif;
@@ -111,15 +112,62 @@
   }
   header h1 {
     font-family: var(--font-heading);
-    font-size: 2.75rem;
+    font-size: 2.6rem;
     color: var(--color-primary);
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    font-size: 1.25rem;
-    color: var(--color-secondary);
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
   }
   
+  header p {
+    text-align: center;
+    font-size: 1.0rem;
+    color: var(--color-primary);
+  }
+
+  .header-text {
+    flex: 1;
+  }
+  
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem; /* space below header */
+    max-width: 900px;      
+    margin: 0 auto 2rem;   
+    padding: 0 1rem; 
+  }
+
+
+  .header-image {
+    flex-shrink: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-secondary);
+  }
+
+/* Mobile: stack text above image */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-image {
+    margin: 10px 0 0;
+  }
+}
+
   /* ==== sects ==== */
   section {
     background-color: var(--color-surface);
