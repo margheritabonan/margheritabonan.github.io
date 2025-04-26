@@ -149,8 +149,8 @@
     }
   
   .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--color-secondary);
