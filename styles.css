@@ -166,6 +166,10 @@
   .header-image {
     margin: 10px 0 0;
   }
+  .profile-img {
+    width: 120px !important;
+    height: 120px !important;
+  }
 }
 
   /* ==== sects ==== */
