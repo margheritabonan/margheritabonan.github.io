@@ -203,7 +203,16 @@
     margin-top: 0.5rem;
     border-radius: 2px;
   }
-  
+
+  /* ====  underline on the first line of any “date + description” block ==== */
+section#experience ul::first-line,
+section#education ul::first-line,
+section#projects ul::first-line {
+  text-decoration-line: underline;
+  text-decoration-color: #502a0458;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
   /* lists */
   ul {
     list-style: none;
