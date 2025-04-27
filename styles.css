@@ -1,4 +1,6 @@
 /* styles.css */
+/* Load Font Awesome icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 /* ==== Color & Typography Variables ==== */
 :root {
@@ -108,7 +110,7 @@
     text-align: center;
     padding-bottom: 2rem;
     border-bottom: 2px solid rgba(0,0,0,0.05);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   header h1 {
     font-family: var(--font-heading);
@@ -225,6 +227,35 @@
     background-color: var(--color-secondary);
     transform: translateY(-2px);
   }
+
+  /* ==== Contact Icons ==== */
+.contact-icons {
+  display: flex;
+  justify-content: left;  
+  gap: 1.5rem;            
+  margin: 1rem 0;          
+}
+
+.contact-icons a {
+  font-size: 1.75rem;        
+  color: var(--color-primary);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.contact-icons a:hover,
+.contact-icons a:focus {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 400px) {
+  .contact-icons {
+    gap: 1rem;
+  }
+  .contact-icons a {
+    font-size: 1.5rem;
+  }
+}
   
   /* ==== footer ==== */
   footer {
